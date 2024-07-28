@@ -24,7 +24,7 @@ const instructors = [
 
 const Teachers = () => {
   return (
-    <div id='teacher' className="container mx-auto mt-20 p-2 mb-10">
+    <div id='teacher' className="container mx-auto mt-10 lg:mt-20 p-2 mb-10">
       <h2 className="text-2xl lg:text-4xl text-blue-900 font-bold mt-10  mb-10 ml-5  ">Bizning Ustozlarimiz</h2>
       <div className="flex flex-wrap justify-center gap-8">
         {instructors.map((instructor, index) => (
