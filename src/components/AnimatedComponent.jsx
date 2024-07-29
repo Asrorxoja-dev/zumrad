@@ -1,17 +1,19 @@
-// src/components/AnimatedComponent.js
-import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import useInView from '../hooks/useInView';
+import { useEffect, useState } from 'react';
 
-const AnimatedComponent = ({ children }) => {
-  const ref = useRef();
-  const isInView = useInView(ref);
+const AnimatedComponent = ({ children, isInView }) => {
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    if (isInView && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [isInView, hasAnimated]);
 
   return (
     <motion.div
-      ref={ref}
-      initial={{ opacity: 0, x: 100 }}
-      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+      animate={hasAnimated ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+      initial={{ opacity: 0, x: 50 }}
       transition={{ duration: 0.5 }}
     >
       {children}

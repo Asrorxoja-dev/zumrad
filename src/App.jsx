@@ -7,12 +7,14 @@ import WeOffers from './components/WeOffers'
 import SecondSlider from './components/SecondSlider'
 import Teachers from './components/Teachers'
 import Footer from './components/Footer'
+import AboutEdu from './components/AboutEdu'
 function App() {
   return (
     <div >
      <div className="align-content">
      <Navbar/>
       <Hero/>
+      <AboutEdu/>
       <Slider/>
       <Courses/>
       <WeOffers/>

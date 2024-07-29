@@ -7,7 +7,7 @@ function Courses() {
   const [showAll, setShowAll] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All');
   
-  // Ref to track the section
+ 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 

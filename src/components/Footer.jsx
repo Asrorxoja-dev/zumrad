@@ -1,3 +1,4 @@
+import { FaArrowUp } from "react-icons/fa";
 
 
 import { FaInstagram, FaTelegram, FaYoutube } from "react-icons/fa";
@@ -62,7 +63,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div className="footer-map">
+        <div className="footer-map flex">
           <iframe
           className="w-full h-full"
             src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d6420.862443272877!2d71.275384!3d40.359844!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDIxJzM1LjQiTiA3McKwMTYnMzEuNCJF!5e1!3m2!1suz!2s!4v1722143596375!5m2!1suz!2s"
@@ -73,7 +74,14 @@ function Footer() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
-        </div>
+          <div className="flex justify-center items-center mt-20 relative">
+            <button className="absolute left-3 rounded-full top-14 bg-blue-600 p-5">
+           <a href="#Hero">
+           <FaArrowUp className="w-5 h-5" />
+           </a>
+            </button>
+          </div>
+        </div> 
       </div>
     </footer>
   );
