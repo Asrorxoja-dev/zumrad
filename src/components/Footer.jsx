@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className="bg-blue-900 mt-20 text-white ">
       <div className="footer-container py-5 lg:py-10 grid grid-cols-1 lg:grid-cols-3 px-5 lg:px-20 items-center">
-        <div className="footer-left-part grid items-center gap-4 justify-between">
+        <div className="footer-left-part  ml-5 lg:ml-0 grid items-center gap-4 justify-between">
           <img src={zumrad} className="w-52 ml-10 cursor-pointer mb-2 lg:ml-0" />
           <ul className="footer-icons flex gap-12 ml-10 lg:ml-0 px-6">
             <li>
