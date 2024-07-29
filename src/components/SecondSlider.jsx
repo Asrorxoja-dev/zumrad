@@ -61,7 +61,7 @@ const SecondSlider = () => {
 
   return (
     <div id="popular" className="container mx-auto px-4 py-8">
-      <h2 className="text-2xl lg:text-4xl text-blue-900 font-bold mt-10  mb-8">
+      <h2 className="text-2xl lg:text-4xl text-blue-900 font-bold  mb-8">
        Eng mashhur kurslar
       </h2>
       <Carousel
