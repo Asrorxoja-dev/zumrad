@@ -35,9 +35,9 @@ function AboutEdu({ from, to, label }) {
 export default function App() {
   return (
     <div className='grid grid-cols-3 mt-10 rounded-2xl bg-blue-100'>
-      <AboutEdu from={5} to={20} label="Courses" />
-      <AboutEdu from={5} to={10} label="Teachers" />
-      <AboutEdu from={200} to={300} label="Students" />
+      <AboutEdu from={5} to={20} label="Kurslar" />
+      <AboutEdu from={5} to={10} label="Ustozlar" />
+      <AboutEdu from={200} to={300} label="O'quvchilar" />
     </div>
   );
 }
