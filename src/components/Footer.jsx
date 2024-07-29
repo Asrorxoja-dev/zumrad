@@ -74,13 +74,6 @@ function Footer() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
-          <div className="flex justify-center items-center mt-20 relative">
-            <button className="absolute left-3 rounded-full top-14 bg-blue-600 p-5">
-           <a href="#Hero">
-           <FaArrowUp className="w-5 h-5" />
-           </a>
-            </button>
-          </div>
         </div> 
       </div>
     </footer>
