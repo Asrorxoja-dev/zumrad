@@ -10,9 +10,9 @@ function Navbar() {
     </a>
   </div>
   <div className="flex-none">
-    <button className="btn  bg-blue-800 font-sans text-white hover:bg-blue-800">
+    {/* <button className="btn  bg-blue-800 font-sans text-white hover:bg-blue-800">
      Register
-    </button>
+    </button> */}
   </div>
 </div>
     </div>

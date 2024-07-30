@@ -105,14 +105,14 @@ function Courses() {
   const displayedCourses = showAll ? filteredCourses : filteredCourses.slice(0, initialDisplayCount);
 
   return (
-    <div id='courses' className="mt-20 ml-4 " ref={ref}>
+    <div id='courses' className="mt-20 px-4" ref={ref}>
       <div className="flex justify-between items-center mb-10">
         <div>
           <h2>
             <p className="text-blue-900 font-bold text-xl lg:text-4xl">Bolalar uchun kurslar</p>
           </h2>
         </div>
-        <div>
+        {/* <div>
           <div className="dropdown dropdown-bottom dropdown-end">
             <div tabIndex={0} role="button" className="mr-10 text-white bg-blue-800 rounded py-1 px-4 m-1">
               <h2 className='font-sans font-bold'>Saralash</h2>
@@ -125,7 +125,7 @@ function Courses() {
               <li><a onClick={() => handleCategoryChange('General')}>Va boshqalar</a></li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7 mb-10">
         {displayedCourses.map((course, index) => (
@@ -135,9 +135,9 @@ function Courses() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <div className="card bg-base-100 w-[357px] h-[340px] shadow-xl">
+            <div className="card bg-base-100 shadow-xl h-[320px]">
               <figure>
-                <img className="w-full" width={300} height={200} src={course.image} alt={course.title} />
+                <img className="w-full md-h-auto h-[200px] rounded-b-md object-cover" width={300} height={200} src={course.image} alt={course.title} />
               </figure>
               <div className="card p-3">
                 <div className="flex justify-between mb-5 items-center">
