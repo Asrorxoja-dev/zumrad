@@ -8,6 +8,7 @@ import SecondSlider from './components/SecondSlider'
 import Teachers from './components/Teachers'
 import Footer from './components/Footer'
 import AboutEdu from './components/AboutEdu'
+import Contact from './components/Contact'
 function App() {
   return (
     <div >
@@ -20,6 +21,7 @@ function App() {
       <WeOffers/>
       <SecondSlider/>
       <Teachers/>
+      <Contact/>
      </div>
   <div>
   <Footer/>

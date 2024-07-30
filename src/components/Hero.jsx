@@ -12,11 +12,11 @@ function Hero() {
              </p>
             </h2>
             <button className='btn w-32 mt-5 lg:mt-10 bg-blue-800 text-white hover:bg-blue-900'>
-              Bog'lanish
+             <a href='#contact'> Bog'lanish</a>
             </button>
         </div>
         <div className='lg:order-2  order-1 hero-image ml-0 lg:ml-40' >
-     <img className=' w-full px-3 md-h-auto rounded-b-md ' src={heroImg} alt="heroImg"  />
+     <img className=' w-full px-0 md-h-auto rounded-b-md ' src={heroImg} alt="heroImg"  />
 
         </div>
     </div>
