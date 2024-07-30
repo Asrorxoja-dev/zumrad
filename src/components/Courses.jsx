@@ -69,6 +69,13 @@ function Courses() {
       category: "IT",
     },
     {
+      title: "Robatatexnika",
+      image: "https://via.placeholder.com/300",
+      rating: 4.5,
+      price: "$110",
+      category: "IT",
+    },
+    {
       title: "Tez o’qish",
       image: "https://via.placeholder.com/300",
       rating: 4.6,
