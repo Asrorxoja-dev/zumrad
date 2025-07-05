@@ -111,10 +111,7 @@ function Courses() {
   //   },
   // ];
   const courses = [
-    {
-      title: "Peredilonka",
-      image: zumradlogo,
-    },
+
     {
       title: "Prezident maktablariga tayyorlov kurslari",
       image: zumradlogo,
@@ -145,10 +142,6 @@ function Courses() {
     },
     {
       title: "Robatatexnika",
-      image: zumradlogo,
-    },
-    {
-      title: "Tez o’qish",
       image: zumradlogo,
     },
     {
