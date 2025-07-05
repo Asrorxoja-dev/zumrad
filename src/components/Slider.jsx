@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
+
 const Slider = () => {
   const cards = [
     {
@@ -37,7 +38,7 @@ const Slider = () => {
     {
         title:"Geografiya",
 
-      image: "https://via.placeholder.com/300",
+      image:"https://via.placeholder.com/300" ,
     },
     {
         title:"Kores tili",

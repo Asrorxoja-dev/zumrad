@@ -1,100 +1,163 @@
-import React, { useState, useRef } from 'react';
-import { CiStar } from "react-icons/ci";
+import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-
+import { API_URL } from "../../api";
+import { useEffect } from "react";
+import zumradlogo from "../assets/zumrad-logo.png";
 function Courses() {
   const initialDisplayCount = 6;
   const [showAll, setShowAll] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  
- 
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const { coursels, setCourses } = useState([]);
+
+  useEffect(() => {
+    fetch(`${API_URL}/courses/all`)
+      .then((response) => response.json())
+      .then((data) => {
+        setCourses(data);
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      }, []);
+  });
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
+  // const courses = [
+
+  //   {
+  //     title: "Peredilonka",
+  //     image: "https://via.placeholder.com/300",
+  //     rating: 4.5,
+  //     price: "$100",
+  //     category: "General",
+  //   },
+  //   {
+  //     title: "Prezident maktablariga tayyorlov kurslari",
+  //     image: "https://via.placeholder.com/300",
+  //     rating: 4.7,
+  //     price: "$150",
+  //     category: "School Preparation",
+  //   },
+  //   {
+  //     title: "Al-Xorazmiy,Mirzo Ulug’bek maktablariga tayyorlov kurslari",
+  //     image: "https://via.placeholder.com/300",
+  //     rating: 4.8,
+  //     price: "$200",
+  //     category: "School Preparation",
+  //   },
+  //   {
+  //     title: "Ixtisoslashtirilgan maktablarga tayyorlov kurslari",
+  //     image: "https://via.placeholder.com/300",
+  //     rating: 4.9,
+  //     price: "$180",
+  //     category: "School Preparation",
+  //   },
+  //   {
+  //     title: "Temurbeklar maktabiga tayyorlov kurslari",
+  //     image: "https://via.placeholder.com/300",
+  //     rating: 4.6,
+  //     price: "$130",
+  //     category: "School Preparation",
+  //   },
+  //   {
+  //     title: "Maktabgacha tayyorlov kurslari",
+  //     image: "https://via.placeholder.com/300",
+  //     rating: 4.3,
+  //     price: "$90",
+  //     category: "Pre-School",
+  //   },
+  //   {
+  //     title: "Mentalni arifmetika",
+  //     image: "https://via.placeholder.com/300",
+  //     rating: 4.7,
+  //     price: "$110",
+  //     category: "General",
+  //   },
+  //   {
+  //     title: "Kompyuter savodxonligi",
+  //     image: "https://via.placeholder.com/300",
+  //     rating: 4.8,
+  //     price: "$120",
+  //     category: "IT",
+  //   },
+  //   {
+  //     title: "Robatatexnika",
+  //     image: "https://via.placeholder.com/300",
+  //     rating: 4.5,
+  //     price: "$110",
+  //     category: "IT",
+  //   },
+  //   {
+  //     title: "Tez o’qish",
+  //     image: "https://via.placeholder.com/300",
+  //     rating: 4.6,
+  //     price: "$140",
+  //     category: "General",
+  //   },
+  //   {
+  //     title: "Tasviriy sa’nat",
+  //     image: "https://via.placeholder.com/300",
+  //     rating: 4.4,
+  //     price: "$95",
+  //     category: "General",
+  //   },
+  //   {
+  //     title: "Bolalar uchun psixolig ko’rigi",
+  //     image: "https://via.placeholder.com/300",
+  //     rating: 4.9,
+  //     price: "$210",
+  //     category: "General",
+  //   },
+  // ];
   const courses = [
     {
       title: "Peredilonka",
-      image: "https://via.placeholder.com/300",
-      rating: 4.5,
-      price: "$100",
-      category: "General",
+      image: zumradlogo,
     },
     {
       title: "Prezident maktablariga tayyorlov kurslari",
-      image: "https://via.placeholder.com/300",
-      rating: 4.7,
-      price: "$150",
-      category: "School Preparation",
+      image: zumradlogo,
     },
     {
       title: "Al-Xorazmiy,Mirzo Ulug’bek maktablariga tayyorlov kurslari",
-      image: "https://via.placeholder.com/300",
-      rating: 4.8,
-      price: "$200",
-      category: "School Preparation",
+      image: zumradlogo,
     },
     {
       title: "Ixtisoslashtirilgan maktablarga tayyorlov kurslari",
-      image: "https://via.placeholder.com/300",
-      rating: 4.9,
-      price: "$180",
-      category: "School Preparation",
+      image: zumradlogo,
     },
     {
       title: "Temurbeklar maktabiga tayyorlov kurslari",
-      image: "https://via.placeholder.com/300",
-      rating: 4.6,
-      price: "$130",
-      category: "School Preparation",
+      image: zumradlogo,
     },
     {
       title: "Maktabgacha tayyorlov kurslari",
-      image: "https://via.placeholder.com/300",
-      rating: 4.3,
-      price: "$90",
-      category: "Pre-School",
+      image: zumradlogo,
     },
     {
       title: "Mentalni arifmetika",
-      image: "https://via.placeholder.com/300",
-      rating: 4.7,
-      price: "$110",
-      category: "General",
+      image: zumradlogo,
     },
     {
       title: "Kompyuter savodxonligi",
-      image: "https://via.placeholder.com/300",
-      rating: 4.8,
-      price: "$120",
-      category: "IT",
+      image: zumradlogo,
     },
     {
       title: "Robatatexnika",
-      image: "https://via.placeholder.com/300",
-      rating: 4.5,
-      price: "$110",
-      category: "IT",
+      image: zumradlogo,
     },
     {
       title: "Tez o’qish",
-      image: "https://via.placeholder.com/300",
-      rating: 4.6,
-      price: "$140",
-      category: "General",
+      image: zumradlogo,
     },
     {
       title: "Tasviriy sa’nat",
-      image: "https://via.placeholder.com/300",
-      rating: 4.4,
-      price: "$95",
-      category: "General",
+      image: zumradlogo,
     },
     {
       title: "Bolalar uchun psixolig ko’rigi",
-      image: "https://via.placeholder.com/300",
-      rating: 4.9,
-      price: "$210",
-      category: "General",
+      image: zumradlogo,
     },
   ];
 
@@ -107,16 +170,23 @@ function Courses() {
     setShowAll(false);
   };
 
-  const filteredCourses = selectedCategory === 'All' ? courses : courses.filter(course => course.category === selectedCategory);
+  const filteredCourses =
+    selectedCategory === "All"
+      ? courses
+      : courses.filter((course) => course.category === selectedCategory);
 
-  const displayedCourses = showAll ? filteredCourses : filteredCourses.slice(0, initialDisplayCount);
+  const displayedCourses = showAll
+    ? filteredCourses
+    : filteredCourses.slice(0, initialDisplayCount);
 
   return (
-    <div id='courses' className="mt-20 px-4" ref={ref}>
+    <div id="courses" className="mt-20 px-4" ref={ref}>
       <div className="flex justify-between items-center mb-10">
         <div>
           <h2>
-            <p className="text-blue-900 font-bold text-xl lg:text-4xl">Bolalar uchun kurslar</p>
+            <p className="text-blue-900 font-bold text-xl lg:text-4xl">
+              Bolalar uchun kurslar
+            </p>
           </h2>
         </div>
         {/* <div>
@@ -144,23 +214,27 @@ function Courses() {
           >
             <div className="card bg-base-100 shadow-xl h-[320px]">
               <figure>
-                <img className="w-full md-h-auto h-[200px] rounded-b-md object-cover" width={300} height={200} src={course.image} alt={course.title} />
+                <img
+                  className="w-full object-cover"
+                  width={100}
+                  height={100}
+                  src={course.image}
+                  alt={course.title}
+                />
               </figure>
               <div className="card p-3">
                 <div className="flex justify-between mb-5 items-center">
                   <div>
-                    <h2 className="card-title font-sans font-semibold text-[18px]">{course.title}</h2>
-                  </div>
-                  <div className="flex items-center">
-                    <button className="btn btn-sm w-16 rounded-3xl p-0">
-                      <CiStar className='w-5 h-5 text-blue-900' />
-                      <span className="text-[12px] text-slate-600">{course.rating}</span>
-                    </button>
+                    <h2 className="card-title font-sans font-semibold text-[18px]">
+                      {course.title}
+                    </h2>
                   </div>
                 </div>
                 <p className="text-slate-400">{course.description}</p>
                 <div className="flex justify-end items-center">
-                  <span className="text-blue-900 font-semibold">{course.price}</span>
+                  <span className="text-blue-900 font-semibold">
+                    {course.price}
+                  </span>
                 </div>
               </div>
             </div>
@@ -169,7 +243,10 @@ function Courses() {
       </div>
       {!showAll && filteredCourses.length > initialDisplayCount && (
         <div className="flex justify-center lg:justify-end mr-0 mb-10 lg:mr-10 mt-0">
-          <h2 className="cursor-pointer text-blue-800 font-sans font-bold text-[15px]" onClick={handleShowAll}>
+          <h2
+            className="cursor-pointer text-blue-800 font-sans font-bold text-[15px]"
+            onClick={handleShowAll}
+          >
             Barchasini ko'rish
           </h2>
         </div>
