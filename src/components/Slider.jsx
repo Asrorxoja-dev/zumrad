@@ -2,65 +2,64 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
+import zumradArt from "../assets/zumradImg.jpg";
 
 const Slider = () => {
   const cards = [
     {
-     title:"Matematika",
-      image: "https://via.placeholder.com/300",
+      title: "Matematika",
+      image: zumradArt,
     },
     {
-     title:"Fizika",
-      image: "https://via.placeholder.com/300",
+      title: "Fizika",
+      image: zumradArt,
     },
     {
-        title:"Ingliz tili",
-      image: "https://via.placeholder.com/300",
+      title: "Ingliz tili",
+      image: zumradArt,
     },
     {
-    title:"Biologiya",
-      image: "https://via.placeholder.com/300",
+      title: "Biologiya",
+      image: zumradArt,
     },
     {
-    title:"Kimyo",
-      image: "https://via.placeholder.com/300",
+      title: "Kimyo",
+      image: zumradArt,
     },
     {
-    title:"Tarix",
-      image: "https://via.placeholder.com/300",
+      title: "Tarix",
+      image: zumradArt,
     },
     {
-        title:"Huquqshunoslik",
+      title: "Huquqshunoslik",
 
-      image: "https://via.placeholder.com/300",
+      image: zumradArt,
     },
     {
-        title:"Geografiya",
+      title: "Geografiya",
 
-      image:"https://via.placeholder.com/300" ,
+      image: zumradArt,
     },
     {
-        title:"Kores tili",
-      image: "https://via.placeholder.com/300",
+      title: "Kores tili",
+      image: zumradArt,
     },
     {
-        title:"Nemis tili",
-      image: "https://via.placeholder.com/300",
+      title: "Nemis tili",
+      image: zumradArt,
     },
     {
-        title:"Turk tili",
-      image: "https://via.placeholder.com/300",
+      title: "Turk tili",
+      image: zumradArt,
     },
     {
-        title:"IT sohasi",
-      image: "https://via.placeholder.com/300",
+      title: "IT sohasi",
+      image: zumradArt,
     },
     {
-        title:"Motivation treninglar",
-      image: "https://via.placeholder.com/300",
+      title: "Motivation treninglar",
+      image: zumradArt,
     },
-   
   ];
 
   const responsive = {
@@ -104,11 +103,10 @@ const Slider = () => {
         {cards.map((card, index) => (
           <div key={index} className="card flex-none ">
             <div className="card-body bg-white  rounded-lg shadow-custom p-4">
-              <img
-                src={card.image}
-                className="h-64 w-96 object-cover rounded"
-              />
-              <h2 className="text-xl text-center font-sans font-bold mb-2">{card.title}</h2>
+              <img src={card.image} className=" object-cover rounded" />
+              <h2 className="text-xl text-center font-sans font-bold mb-2">
+                {card.title}
+              </h2>
             </div>
           </div>
         ))}

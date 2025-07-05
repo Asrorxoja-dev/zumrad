@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { API_URL } from "../../api";
 import { useEffect } from "react";
-import zumradlogo from "../assets/zumrad-logo.png";
+import zumradlogo from "../assets/zumradImg.jpg";
 function Courses() {
   const initialDisplayCount = 6;
   const [showAll, setShowAll] = useState(false);
@@ -212,20 +212,19 @@ function Courses() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <div className="card bg-base-100 shadow-xl h-[320px]">
+            <div className="card bg-base-150 cursor-pointer shadow-xl h-[470px]">
               <figure>
                 <img
-                  className="w-full object-cover"
-                  width={100}
-                  height={100}
+                  className="w-[400px] h-[300px] object-cover"
+                  width={300}
+                  height={200}
                   src={course.image}
-                  alt={course.title}
                 />
               </figure>
               <div className="card p-3">
                 <div className="flex justify-between mb-5 items-center">
                   <div>
-                    <h2 className="card-title font-sans font-semibold text-[18px]">
+                    <h2 className="text-center justify-content-center mx-20 pt-10 font-sans font-semibold text-[18px]">
                       {course.title}
                     </h2>
                   </div>
